@@ -66,7 +66,7 @@
       state: present
   - name: Add nodejs 16.x ppa for apt repo
     apt_repository:
-      repo: deb https://deb.nodesource.com/node_16.x bionic main
+      repo: deb https://deb.nodesource.com/node_16.x {{ lsb_rel.stdout }} main
       update_cache: yes
   - name: Install nodejs
     apt:
