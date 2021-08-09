@@ -73,3 +73,7 @@
       name: nodejs
       update_cache: yes
       state: present
+  - name: Clone the weatherapp repo from GitHub on the remote server
+    ansible.builtin.git:
+      repo: https://github.com/laurent-github38/weatherapp.git
+      dest: /src/docker
